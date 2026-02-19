@@ -1,0 +1,23 @@
+---
+title: "Mock Project for Hons"
+format: html
+editor: visual
+---
+
+## Bird Mock Project
+
+This is mock honours project using data from a project that I did for BIO3013F 
+Global Change course.
+
+```{r}
+1 + 1
+```
+
+You can add options to executable code like this
+
+```{r}
+#| echo: false
+2 * 2
+```
+
+The `echo: false` option disables the printing of code (only output is displayed).
