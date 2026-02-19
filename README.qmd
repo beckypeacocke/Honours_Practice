@@ -6,7 +6,7 @@ editor: visual
 
 ## Bird Mock Project
 
-This is mock honours project using data from a project that I did for BIO3013F 
+This is mock honours project using data from a project that I did for the BIO3013F 
 Global Change course.
 
 ```{r}
