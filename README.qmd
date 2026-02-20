@@ -7,10 +7,11 @@ editor: visual
 ## Bird Mock Project
 
 This is mock honours project using data from a project that I did for the BIO3013F 
-Global Change course.
+Global Change course. The data includes sightings of birds in an urban area (UCT
+upper campus) and a non-urban area (Kirstenbosch).
 
 ```{r}
-1 + 1
+library(tidyverse)
 ```
 
 You can add options to executable code like this
