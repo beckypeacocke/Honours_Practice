@@ -6,11 +6,15 @@ editor: visual
 
 ## Bird Mock Project
 
-This is mock honours project using data from a project that I did for the BIO3013F Global Change course. The data includes sightings of bird species in an urban area (UCT upper campus) and a non-urban area (Kirstenbosch). Three transects were plotted for each site and the data were collected in 2024 and 2025.
+This is mock honours project using data from a project that I did for the BIO3013F Global Change course. The data includes sightings of bird species in an urban area (UCT upper campus) and a non-urban area (Kirstenbosch). Three transects were plotted for each site and the data were collected in 2024 and 2025. The aim of the original project was to compare bird communities and species diversity across an urban gradient.
+
+![](Site_map.png)Figure 1: Labeled map of the transects plotted for each site.
+
+I am using this dataset to practice tidying datasets and using a Github repository.
 
 ## Clean Data
 
-First I reformatted the raw dataset to make it tidy. I called all columns with species names, copied this output into the script below and refomatted it so that I could convert the
+First I reformatted the raw dataset to make it tidy.
 
 ```{r}
 library(tidyverse)
@@ -28,8 +32,8 @@ urban_bird3 <- urban_bird2 %>%
   filter(urban_bird2$Sightings != 0)
 ```
 
-I created a new column by combining the site and year columns. This will be useful when doing basic
-data exploration.
+I created a new column by combining the site and year columns. This will be useful when doing basic data exploration.
+
 ```{r}
 urban_bird4 <- urban_bird3 %>%
   mutate(Year_Site = paste(Year, Site))
@@ -38,6 +42,7 @@ urban_bird4 <- urban_bird3 %>%
 ## Basic data exploration
 
 For each site and year, I determined how species were spotted in total.
+
 ```{r}
 urban_bird4 %>%
   count(Year_Site)
