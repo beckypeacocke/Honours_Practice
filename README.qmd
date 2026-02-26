@@ -10,7 +10,7 @@ This is mock honours project using data from a project that I did for the BIO301
 
 ## Clean Data
 
-First I reformatted the raw dataset to make it tidy.
+First I reformatted the raw dataset to make it tidy. I called all columns with species names, copied this output into the script below and refomatted it so that I could convert the
 
 ```{r}
 library(tidyverse)
@@ -21,9 +21,24 @@ urban_bird2 <- urban_bird %>%
                names_to = "Species", values_to = "Sightings") 
 ```
 
-I removed all rows where no individuals of a species were sighted.
+I then removed all rows where no individuals of a species were sighted.
 
 ```{r}
 urban_bird3 <- urban_bird2 %>%
   filter(urban_bird2$Sightings != 0)
+```
+
+I created a new column by combining the site and year columns. This will be useful when doing basic
+data exploration.
+```{r}
+urban_bird4 <- urban_bird3 %>%
+  mutate(Year_Site = paste(Year, Site))
+```
+
+## Basic data exploration
+
+For each site and year, I determined how species were spotted in total.
+```{r}
+urban_bird4 %>%
+  count(Year_Site)
 ```
