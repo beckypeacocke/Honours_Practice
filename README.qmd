@@ -6,6 +6,8 @@ editor: visual
 
 ## Bird Mock Project
 
+https://hub.2i2c.mybinder.org/user/beckypeacocke-honours_practice-eg9h12jy/lab
+
 This is mock honours project using data from a project that I did for the BIO3013F Global Change course. The data includes sightings of bird species in an urban area (UCT upper campus) and a non-urban area (Kirstenbosch). Three transects were plotted for each site and the data were collected in 2024 and 2025. The aim of the original project was to compare bird communities and species diversity across an urban gradient.
 
 ![](Site_map.png)Figure 1: Labeled map of the transects plotted for each site.
